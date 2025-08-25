@@ -1,1 +1,0 @@
-print("Olá, Mundo! Tinha um bug")
