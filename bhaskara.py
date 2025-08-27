@@ -23,6 +23,8 @@ try:
     print("X1:", x1)
     print("X2:", x2)
     print("Raízes reais encontradas.")
+    if delta != 0:
+        print("As raizes são diferentes de zero")
 except:
     print("Δ é menor que zero - a equação não possui raízes reais!")
     sys.exit()
