@@ -7,7 +7,7 @@ try:
     b = float(b)
     c = float(c)
 except:
-    print("Insira Numeros")
+    print("Insira Numeros validos")
 
 delta = (b**2) - (4*a*c)
 
