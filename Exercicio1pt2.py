@@ -15,6 +15,3 @@ if (delta) > 0 :
     print ("Δ é menor que zero - Equação não possui raízes reais")
 else :
     print (x1) and print (x2)
-    
- 
- 
