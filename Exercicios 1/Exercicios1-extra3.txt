@@ -1,0 +1,32 @@
+# Exercício 3: Decisão de Duas Vias (comando if-else)
+
+# EXERCÍCIO 3: DECISÃO DE DUAS VIAS
+# Instruções: Complete as seguintes tarefas usando comandos if-else
+
+# Tarefa 1: Número par ou ímpar
+# Crie uma variável chamada 'numero' e atribua qualquer inteiro
+# Use if-else para verificar se o número é par ou ímpar
+# Imprima "Número par" ou "Número ímpar" adequadamente
+# Dica: use o operador módulo (%) para verificar o resto da divisão por 2
+
+# Tarefa 2: Elegibilidade para votar
+# Crie uma variável chamada 'idade' e atribua qualquer valor
+# Use if-else para verificar se a pessoa pode votar (idade >= 16 no Brasil)
+# Imprima "Você pode votar" ou "Você ainda não pode votar"
+
+# Tarefa 3: Desconto no preço
+# Crie uma variável chamada 'compra_total' e atribua qualquer valor
+# Use if-else para aplicar desconto: se compra >= 100, aplique 10% de desconto
+# Imprima o preço final com ou sem desconto
+
+# Tarefa 4: Roupa para o clima
+# Crie uma variável chamada 'temperatura' e atribua qualquer valor
+# Use if-else para sugerir roupa: se temp < 20, sugira "Use uma jaqueta"
+# Caso contrário sugira "Camiseta está bom"
+
+# Tarefa 5: Disponibilidade de nome de usuário
+# Crie uma variável chamada 'tamanho_usuario' e atribua qualquer valor
+# Use if-else para verificar se o nome de usuário é válido (tamanho entre 3 e 15)
+# Imprima "Nome de usuário é válido" ou "Nome de usuário é inválido"
+
+# Escreva seu código abaixo:

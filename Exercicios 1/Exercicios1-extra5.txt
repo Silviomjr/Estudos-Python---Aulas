@@ -1,0 +1,38 @@
+# Exercício 5: Tratamento de Erros com Try-Except
+
+# EXERCÍCIO 5: TRY-EXCEPT
+# Instruções: Complete as seguintes tarefas usando blocos try-except
+
+# Tarefa 1: Proteção contra divisão por zero
+# Crie duas variáveis: 'dividendo' e 'divisor'
+# Use try-except para dividi-las com segurança
+# Se ocorrer divisão por zero, imprima "Não é possível dividir por zero"
+# Caso contrário, imprima o resultado
+
+# Tarefa 2: Conversão para inteiro
+# Crie uma variável chamada 'entrada_usuario' com um valor string (como "123" ou "abc")
+# Use try-except para convertê-la em um inteiro
+# Se a conversão falhar, imprima "Formato de número inválido"
+# Caso contrário, imprima o número convertido
+
+# Tarefa 3: Acesso a índice de lista
+# Crie uma lista com 3 elementos: numeros = [10, 20, 30]
+# Use try-except para acessar um elemento no índice 5
+# Se ocorrer erro de índice, imprima "Índice fora do alcance"
+# Caso contrário, imprima o elemento
+
+# Tarefa 4: Simulação de operação com arquivo
+# Use try-except para simular a abertura de um arquivo que não existe
+# Tente abrir "arquivo_inexistente.txt"
+# Se o arquivo não for encontrado, imprima "Arquivo não encontrado" e use exit() para parar o script
+# Inclua uma declaração print após o try-except que não deve ser executada
+
+# Tarefa 5: Tratamento de múltiplas exceções
+# Crie um código que:
+# - Receba uma entrada string e converta para float
+# - Divida 100 por esse número
+# - Acesse o elemento 0 de uma lista [resultado]
+# Use try-except para tratar ValueError, ZeroDivisionError e IndexError separadamente
+# Imprima mensagens de erro apropriadas para cada tipo de exceção
+
+# Escreva seu código abaixo:
