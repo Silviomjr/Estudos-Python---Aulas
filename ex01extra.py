@@ -10,6 +10,6 @@ idade = idade + 5
 
 eh_estudante = not eh_estudante
 
-altura_cm = altura * 100
+altura_cm = int(altura * 100)
 
 print ("\n Idade: ", idade, "\n Estudante", eh_estudante, "\n Ano Nascimento:", ano_nascimento, "\n Altura em Cm:", altura_cm)
