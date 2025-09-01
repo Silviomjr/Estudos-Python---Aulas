@@ -1,0 +1,39 @@
+Exercício 1: Atribuição de Variáveis em Python
+
+Escreva um script Python que realize as seguintes tarefas:
+
+1. Crie uma variável chamada 'nome' e atribua seu próprio nome como string
+
+2. Crie uma variável chamada 'idade' e atribua sua idade como número inteiro
+
+3. Crie uma variável chamada 'altura' e atribua sua altura em metros como número decimal
+
+4. Crie uma variável chamada 'estudante' e atribua o valor booleano True
+
+5. Crie uma variável chamada 'cidade' e atribua o nome da sua cidade como string
+
+6. Use print() para mostrar cada variável
+
+7. Crie uma nova variável 'anos_futuro' que seja sua idade + 10
+
+8. Use print() para mostrar quantos anos você terá em 10 anos
+
+Dicas:
+- Para strings, use aspas: "texto"
+- Para números inteiros, use apenas o número: 25 (int)
+- Para números decimais, use ponto: 1.75 (float)
+- Para booleanos, use: True ou False
+
+DESAFIO DO TIO SILVIO!!!!
+A fórmula de Bhaskara é uma forma para encontrar as raízes de um polinômio do segundo grau do tipo:
+a*x^2 + b*x + c = 0;
+
+Lembrando que a solução da fórmula é dada por:
+
+x = (-b ± √Δ) / (2a), com Δ = b² - 4ac;
+
+Para isso, você irá escrever um script recebendo os inputs de a, b e c.
+Lembre-se, para termos raízes reais, Δ > 0! Então, se Δ for menor que zero, você deverá mostrar em tela o aviso "Δ é menor que zero - a equação não possui raízes reais!". 
+Para os demais casos, você deverá, ao final do script, mostrar em tela as duas raízes da equação - não se preocupe caso Δ = 0!
+Por fim, verifique se os inputs dados são números (no arquivo exercicio1_exemplo tem uma forma de como se utiliza a função type). 
+Boa sorte!

@@ -1,0 +1,31 @@
+# Exercício 2: Decisão de Uma Via (comando if)
+
+# EXERCÍCIO 2: DECISÃO DE UMA VIA
+# Instruções: Complete as seguintes tarefas usando comandos if
+
+# Tarefa 1: Verificação de idade
+# Crie uma variável chamada 'idade' e atribua qualquer valor
+# Use um comando if para verificar se a pessoa é maior de idade (idade >= 18)
+# Se verdadeiro, imprima "Você é maior de idade"
+
+# Tarefa 2: Verificação de número positivo
+# Crie uma variável chamada 'numero' e atribua qualquer valor
+# Use um comando if para verificar se o número é positivo (> 0)
+# Se verdadeiro, imprima "O número é positivo"
+
+# Tarefa 3: Verificação do comprimento da senha
+# Crie uma variável chamada 'senha' e atribua qualquer string
+# Use um comando if para verificar se a senha tem pelo menos 8 caracteres
+# Se verdadeiro, imprima "Senha é forte o suficiente"
+
+# Tarefa 4: Verificação de temperatura
+# Crie uma variável chamada 'temperatura' e atribua qualquer valor
+# Use um comando if para verificar se está quente (temperatura > 30)
+# Se verdadeiro, imprima "Está quente lá fora!"
+
+# Tarefa 5: Verificação de nota
+# Crie uma variável chamada 'nota' e atribua qualquer valor entre 0-100
+# Use um comando if para verificar se o estudante passou (nota >= 60)
+# Se verdadeiro, imprima "Parabéns! Você passou!"
+
+# Escreva seu código abaixo:

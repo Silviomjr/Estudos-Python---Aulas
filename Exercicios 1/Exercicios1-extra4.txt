@@ -1,0 +1,34 @@
+# Exercício 4: Decisão de Múltiplas Vias (comando if-elif-else)
+
+# EXERCÍCIO 4: DECISÃO DE MÚLTIPLAS VIAS
+# Instruções: Complete as seguintes tarefas usando comandos if-elif-else
+
+# Tarefa 1: Classificação de notas
+# Crie uma variável chamada 'nota' e atribua qualquer valor entre 0-100
+# Use if-elif-else para classificar a nota:
+# A: 90-100, B: 80-89, C: 70-79, D: 60-69, F: abaixo de 60
+# Imprima a letra da nota correspondente
+
+# Tarefa 2: Categoria de idade
+# Crie uma variável chamada 'idade' e atribua qualquer valor
+# Use if-elif-else para categorizar a pessoa:
+# Criança: 0-12, Adolescente: 13-17, Adulto: 18-59, Idoso: 60+
+# Imprima a categoria correspondente
+
+# Tarefa 3: Sistema de semáforo
+# Crie uma variável chamada 'cor_semaforo' e atribua "vermelho", "amarelo" ou "verde"
+# Use if-elif-else para imprimir a ação correspondente:
+# Vermelho: "Pare", Amarelo: "Atenção", Verde: "Siga", Outro: "Cor inválida"
+
+# Tarefa 4: Calculadora de IMC
+# Crie variáveis para 'peso' (kg) e 'altura' (metros)
+# Calcule IMC = peso / (altura * altura)
+# Use if-elif-else para classificar o IMC:
+# Abaixo do peso: < 18.5, Normal: 18.5-24.9, Sobrepeso: 25-29.9, Obeso: >= 30
+
+# Tarefa 5: Identificador de estação
+# Crie uma variável chamada 'mes' e atribua qualquer valor entre 1-12
+# Use if-elif-else para identificar a estação (Hemisfério Sul):
+# Verão: 12,1,2 | Outono: 3,4,5 | Inverno: 6,7,8 | Primavera: 9,10,11
+
+# Escreva seu código abaixo:

@@ -1,0 +1,27 @@
+# Exercício 1: Prática de Atribuição de Variáveis
+
+# EXERCÍCIO 1: ATRIBUIÇÃO DE VARIÁVEIS
+# Instruções: Complete as seguintes tarefas
+
+# Tarefa 1: Crie variáveis com suas informações pessoais
+# Crie uma variável chamada 'nome' e atribua seu nome como string
+# Crie uma variável chamada 'idade' e atribua sua idade como inteiro
+# Crie uma variável chamada 'altura' e atribua sua altura em metros como float
+# Crie uma variável chamada 'eh_estudante' e atribua True ou False como boolean
+
+# Tarefa 2: Imprima todas as suas variáveis
+# Imprima cada variável com uma mensagem descritiva
+# Exemplo: print("Meu nome é:", nome)
+
+# Tarefa 3: Reatribuição de variáveis
+# Altere sua idade adicionando 5 anos a ela
+# Altere seu status de estudante para o oposto (True para False ou False para True)
+
+# Tarefa 4: Crie variáveis de cálculo
+# Crie uma variável chamada 'ano_nascimento' que calcule seu ano de nascimento (2025 - idade)
+# Crie uma variável chamada 'altura_cm' que converta sua altura de metros para centímetros
+
+# Tarefa 5: Imprima os resultados finais
+# Imprima seu ano de nascimento e altura em centímetros com mensagens descritivas
+
+# Escreva seu código abaixo:
