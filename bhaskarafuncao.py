@@ -25,6 +25,4 @@ try:
 except:
     print("Insira Numeros Validos")
     sys.exit()
-
-
 bhaskara(a, b, c)
