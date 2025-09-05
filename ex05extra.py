@@ -7,7 +7,7 @@ try:
 except ZeroDivisionError:
     print("Erro: Divisão por zero não é permitida.")
 
-entrada_usuario = "123"
+entrada_usuario = input("Digite um número ou letra: ")
 
 try:
     numero = int(entrada_usuario)
