@@ -26,13 +26,24 @@ def raiz(valor1):
     resultado = valor1 ** 0.5
     return resultado
 
-def bhaskara(valor1, valor2 ,valor3):
-    delta = (valor2**2) - (4*valor1*valor3)
 
+
+def bhaskara(a, b ,c):
+
+    primeirotermo = mult(b,b)
+    segundotermo = mult(4, mult(a,c))
+    delta = sub(primeirotermo, segundotermo)
+ 
 
     if delta >= 0:
-        x1 = (-valor2 + (delta**0.5)) / (2*valor1)
-        x2 = (-valor2 - (delta**0.5)) / (2*valor1)
+
+        primeiroTermo = raiz(delta)
+        segundoTermo = mult(2,a)
+        terceiroTermo = divisao(primeirotermo, segundoTermo)
+        quartoTermo = soma(-b, terceiroTermo)
+        quintoTermo = sub(-b, terceiroTermo)
+        x1 = quartoTermo
+        x2 = quintoTermo
         print("Δ:", delta)
         print("X1:", x1)
         print("X2:", x2)
