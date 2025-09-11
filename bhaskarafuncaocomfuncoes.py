@@ -36,12 +36,12 @@ def bhaskara(a, b ,c):
  
 
     if delta >= 0:
-
         primeiroTermo = raiz(delta)
         segundoTermo = mult(2,a)
         terceiroTermo = divisao(primeirotermo, segundoTermo)
         quartoTermo = soma(-b, terceiroTermo)
         quintoTermo = sub(-b, terceiroTermo)
+
         x1 = quartoTermo
         x2 = quintoTermo
         print("Δ:", delta)
