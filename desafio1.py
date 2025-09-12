@@ -1,4 +1,4 @@
-import math
+#import math
 """"
 try:
     a = float(input("Digite o valor de A: "))
@@ -21,6 +21,7 @@ else:
         print("Segunda raiz: ", x2)
     else:
         print("Delta é menor que zero, equação não possui raizes reais.")
+
 """
 # função
 
@@ -48,4 +49,6 @@ def bhaskara(a, b, c):
 
         
 bhaskara(1, 1, 1)
+
+
 
