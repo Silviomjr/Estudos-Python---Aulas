@@ -10,6 +10,7 @@ string2 = '   Olá Mundo   '
 string2 = string2.strip()
 print(string2)
 
-string3 = 'Olá Silvio'
+string3 = 'Olá Silvio Silvio Silvio'
 string4 = string3.replace('Silvio', 'Rafael')
+print(string3)
 print(string4)
