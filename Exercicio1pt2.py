@@ -1,17 +1,18 @@
-a = input ('Valor de A: ')
-b = input ('Valor de B: ')
-c = input ('Valor de C: ')
-
-if type(a and b and c) == int :
-    print ("Calculando...")
-else :
-    print ("Campo numerico, favor corrigir")
+import sys
+try: 
+    a= float (input ('Valor de A: '))
+    b= float (input ('Valor de B: '))
+    c= float (input ('Valor de C: '))
+except :
+    print ("Campo  e diferente de 0, favor corrigir")
+    sys.exit()
 
 delta = (b**2) - (4*a*c)
-x1 = (-b + math.sqrt(delta)) / (2*a)
-x2 = (-b - math.sqrt(delta)) / (2*a)
 
-if (delta) > 0 :
+if (delta) < 0 :
     print ("Δ é menor que zero - Equação não possui raízes reais")
 else :
-    print (x1) and print (x2)
+    print ("Δ possui raizes reais")
+    x1 = (-b + (delta**0.5)) / (2*a)
+    x2 = (-b - (delta**0.5)) / (2*a)
+    print ("Raiz 1: " , x1, "\nRaiz 2: " , x2)

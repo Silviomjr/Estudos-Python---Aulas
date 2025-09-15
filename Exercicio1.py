@@ -1,12 +1,12 @@
 nome = "Ana Larissa"
-print (nome)
+print ("Nome: " , nome)
 idade = 26
-print (idade) 
+print ("Idade: " , idade) 
 altura = 1.70
-print (altura)
+print ("Altura: " , altura)
 estudante = False
-print (estudante)
+print ("Estudante: " , estudante)
 cidade = "Salto"
-print (cidade)
+print ("Cidade: " , cidade)
 idade_futura = (idade) + 10
-print (idade_futura)
+print ("Idade daqui 10 anos: " ,idade_futura)
