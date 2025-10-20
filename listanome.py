@@ -1,4 +1,4 @@
-ListaNome = ['marquard', 'zhen', 'cwen', 'csev', 'zhen', 'marquard','MARQUARD', 'Marquard']
+ListaNome = ['marquard', 'zhen', 'cwen', 'csev', 'zhen','MARQUARD', 'Marquard']
 
 dicionarioContagem = dict()
 
