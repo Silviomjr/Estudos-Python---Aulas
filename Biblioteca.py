@@ -4,20 +4,20 @@ class Biblioteca:
     
     #função para gerenciar itens           
     def gerenciar_item(self):
-        acao = input("Digite a ação desejada (Adicionar, Remover, Emprestar, Devolver, Listar ou Histórico): ").casefold() #Adicionar novos itens
-        if acao == "adicionar":
+        acao_biblioteca = input("Digite a ação desejada (Adicionar, Remover, Emprestar, Devolver, Listar ou Histórico): ").casefold() #Adicionar novos itens
+        if acao_biblioteca == "adicionar":
             self.adicionar_item()
-        elif acao == "remover":
+        elif acao_biblioteca == "remover":
             self.remover_item()
-        elif acao == "emprestar":
+        elif acao_biblioteca == "emprestar":
             self.emprestar_item()
-        elif acao == "devolver":
-          self.devolver_item()
-        elif acao == "listar": 
+        elif acao_biblioteca == "devolver":
+            self.devolver_item()
+        elif acao_biblioteca == "listar": 
             self.listar_itens()
         else:
             print("Ação inválida.")
-    
+
     #ação de adicionar itens
     def adicionar_item(self):
         tipo_item = input("Digite o tipo de item (Livro, Filme, Audiobook): ").casefold()
@@ -27,20 +27,20 @@ class Biblioteca:
             ano = input("Digite o ano de publicação do livro: ").casefold()
             paginas = int(input("Digite o número de páginas do livro: "))
             genero = input("Digite o gênero do livro: ").casefold()
-            self.itens_biblioteca["Livros"].append(Livro(1, titulo, ano, autor, paginas, genero))
+            self.itens_biblioteca["Livros"].append(Livro(titulo, ano, autor, paginas, genero))           
         elif tipo_item == "filme":
             titulo = input("Digite o título do filme: ").casefold()
             diretor = input("Digite o diretor do filme: ").casefold()
             ano = input("Digite o ano de lançamento do filme: ").int()
             duracao_minutos = input("Digite a duração do filme em minutos: ").int()
             nota_de_avaliacao = input("Digite a nota de avaliação do filme: ").float()
-            self.itens_biblioteca["Filmes"].append(Filme(1, titulo, ano, diretor, duracao_minutos, nota_de_avaliacao))
+            self.itens_biblioteca["Filmes"].append(Filme(titulo, ano, diretor, duracao_minutos, nota_de_avaliacao))            
         elif tipo_item == "audiobook":
             titulo = input("Digite o título do audiobook: ").casefold()
             narrador = input("Digite o narrador do audiobook: ").casefold()
             ano =input("Digite o ano de lançamento do audiobook: ").int()
             duracao_horas = input("Digite a duração do audiobook em horas: ").float()
-            self.itens_biblioteca["Audiobook"].append(AudioBook(1, titulo, ano, narrador, duracao_horas))
+            self.itens_biblioteca["Audiobook"].append(AudioBook(titulo, ano, narrador, duracao_horas))            
         else:
             print("Ação inválida.")
                 
@@ -50,7 +50,18 @@ class Biblioteca:
             titulo_item = input("Digite o titulo do item a ser removido: ").casefold()
             item = tipo_item.capitalize() + "s"
             if item in self.itens_biblioteca:
-                self.itens_biblioteca[item] = [titulo for titulo in self.itens_biblioteca[item] if titulo != titulo_item]
+                print(self.itens_biblioteca[item])
+                # refazer buscando pelo indice usando o titulo
+                # achar o index usando => index ## TIPO LIVRO
+                # self.itens_biblioteca[item] = [titulo for titulo in self.itens_biblioteca[item] if titulo != titulo_item]
+                for i, item in enumerate(self.itens_biblioteca[item]):
+                    if item.titulo == titulo_item:
+                        self.itens_biblioteca[item].pop(i)
+                        # del self.itens_biblioteca[item][i]
+                        print(f"O item '{titulo_item}' foi removido com sucesso.")
+                        break
+                else:
+                    print(f"O item '{titulo_item}' não foi encontrado na biblioteca.")
             else:
                 print("Ação inválida.")
                 
@@ -85,6 +96,7 @@ class Biblioteca:
     def listar_itens(self):
         for categoria, itens in self.itens_biblioteca.items():
             print(f"\n{categoria}:")
+            print(itens)
             for item in itens:
                 disponibilidade = "Disponível" if item.disponibilidade else "Indisponível"
                 if categoria == "Livros":
@@ -97,38 +109,43 @@ class Biblioteca:
             print("Ação inválida.")
 
 class Midia:
-    def _init_(self, titulo, ano): #disponibilidade
+    def __init__(self, titulo, ano): #disponibilidade
         self.titulo = titulo
         self.ano = ano
         self.disponibilidade = True
 
             
 class Livro(Midia):
-    def _init_(self, titulo, ano, autor, paginas, genero):
-        super()._init_(titulo, ano)
-        super().itens_biblioteca["Livros"].append(self)
+    def __init__(self, titulo, ano, autor, paginas, genero):
+        super().__init__(titulo, ano)
         self.autor = autor
         self.paginas = paginas
         self.genero = genero
                
 class Filme(Midia):
-    def _init_(self, titulo, ano, diretor ,duracao_minutos, nota_de_avaliacao):
-        super()._init_(titulo, ano)
-        super().itens_biblioteca["Filmes"].append(self)
+    def __init__(self, titulo, ano, diretor ,duracao_minutos, nota_de_avaliacao):
+        super().__init__(titulo, ano)
         self.diretor = diretor
         self.duracao_minutos = duracao_minutos
         self.nota_de_avaliacao = nota_de_avaliacao
     
 class AudioBook(Midia):
-    def _init_(self, titulo, ano, narrador ,duracao_horas):
-        super()._init_(titulo, ano)
-        super().itens_biblioteca["AudioBooks"].append(self)
+    def __init__(self, titulo, ano, narrador ,duracao_horas):
+        super().__init__(titulo, ano)
         self.narrador = narrador
         self.duracao_horas = duracao_horas
         
 if __name__ == "__main__":
-    Biblioteca().gerenciar_item()   
-    
+    biblioteca = Biblioteca() 
+    while True:
+        acao = input("Deseja gerenciar a biblioteca? (s/n): ").casefold()
+        if acao == "n":
+            break
+        elif acao == "s":
+            biblioteca.gerenciar_item()
+        else:
+            print("Ação inválida.")
+          
     # def obter_informaçao_filme(self): #listagem para o filme
     #      super()._init_(titulo, ano, disponibilidade) == self.obter_informaçao()
     # print(f'Titulo: {titulo}, Ano: {ano}, Disponibilidade: {disponibilidade}, Diretor: {self.diretor}, Duração (minutos): {self.duracao_minutos}, Nota de Avaliação: {self.nota_de_avaliacao}')  
