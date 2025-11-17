@@ -50,6 +50,7 @@ class AudioBook(Midia):
         self.id = None
         self.narrador = narrador
         self.duracao_horas = duracao_horas
+        self.emprestimo = []
 
     def gerar_id(self, id):
         self.id = id
@@ -77,9 +78,8 @@ class Library:
         self.itens[categoria].append(item)
 
     def remover_item(self, item, categoria):
-        if categoria not in self.itens:
-            self.itens[categoria] = []
-        self.itens[categoria].remove(item)
+        if categoria in self.itens and item in self.itens[categoria]:
+          self.itens[categoria].remove(item)
 
     def listar_itens(self):
         for categoria, itens in self.itens.items(): 
@@ -102,19 +102,30 @@ class Library:
                     resultados.append((categoria, item))
         return print("Resultados:", resultados[0][1].titulo if resultados else "Nenhum item encontrado com esse título.")
 
-    def emprestar(self, titulo, disponibilidade):
-        if(disponibilidade):
-            print(f"Item '{self.titulo}' emprestado.")
-            disponibilidade = False
-        else:
-            print(f"Item '{self.titulo}' já locado, não pode ser emprestado.")
+    def emprestar(self, titulo):
+        for categoria, itens in self.itens.items():
+            for item in itens:
+                if item.titulo.lower() == titulo.lower():
+                    if item.disponibilidade:
+                        item.disponibilidade = False
+                        self.emprestimo.append((categoria, item))
+                        print(f"Item '{item.titulo}' emprestado.")
+                else:
+                    print(f"Item '{item.titulo}' já está emprestado.")
+                return
+    print("Item não encontrado.")
 
-    def devolver_item(self, titul, disponibilidade):
-        if(not self.disponibilidade):
-            print(f"Item '{self.titulo}' devolvido.")
-            self.disponibilidade = True
-        else:
-            print(f"Item '{self.titulo}' já está disponível, não precisa ser retornado.")
+    def devolver_item(self, titulo):
+        for categoria, itens in self.itens.items():
+            for item in itens:
+                if item.titulo.lower() == titulo.lower():
+                    if not item.disponibilidade:
+                        item.disponibilidade = True
+                        print(f"Item '{item.titulo}' devolvido.")
+                else:
+                    print(f"Item '{item.titulo}' já está disponível.")
+                return
+    print("Item não encontrado.")
 
     def mostrar_dicionario(self):
         for categoria, itens in self.itens.items():
@@ -159,4 +170,7 @@ biblioteca.remover_item(audiobook2, Categoria.AUDIOBOOK)
 # biblioteca.historico_de_emprestimos() Input de usuario => 
 biblioteca.listar_itens() 
 biblioteca.buscar_item_por_titulo()
-#biblioteca.emprestar(livro1.titulo, livro1.disponibilidade)
+biblioteca.emprestar("O Hobbit")
+biblioteca.emprestar("O Lobbit")
+biblioteca.devolver_item("O Hobbit")
+biblioteca.listar_itens()
